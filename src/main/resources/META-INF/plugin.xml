@@ -1,0 +1,85 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>io.github.appspirimentlabs.vectorpreview</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Resource Preview</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="appspirimentlabs@gmail.com" url="https://appspirimentlabs.github.io">appspirimentlabs</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+
+<span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;"><p>Android Studio Plugin to preview the Vector/SVG files in the project. This plugin shows all the vector images available in the project in a single scrollable list, and makes it easy to find one particular image resource from the list.</p>
+
+<p>The plugin brings more features to make the search easier:</p>
+
+<ul>
+    <li>Filter the list based on module, brand or theme.</li>
+    <li>Search for file names.</li>
+    <li>Change the image size, so identifying image is easier.</li>
+    <li>Internal dark & light theme to see images better.</li>
+    <li>Double-click on the preview to open file.</li>
+</ul>
+</p>
+<p>The <b>Resource Preview</b> window will most commonly available in the left pane/ primary pane of Android Studio. If not, enable from <b>View</b> | <b>Tool Windows</b> | <b>Resource Preview</b>.</p><br/>
+<p><i>Note: The current versions of this plugin only support Mac OS (Apple & Intel) & Windows. Linux is not supported at the moment.</i></p><br/>
+<h4>What's New</h4>
+
+<div style="margin-left: 20px;">
+    Version <b>1.0.1</b><br/>
+    <ul>
+        <li>Support for PNG & JPEG drawables</li>
+        <li>Handling "No drawables" scenario</li>
+    </ul>
+</div>
+<h4>Version Compatibility</h4>
+<div style="margin-left: 20px;">
+<ul>
+    <li>1.x.x-231.9392.1&nbsp;&nbsp;&nbsp;<span style="">|&nbsp;&nbsp;&nbsp;Hedgehog</li>
+    <li>1.x.x-223.8836.35 &nbsp;&nbsp;&nbsp;<span style="">|&nbsp;&nbsp;&nbsp;Giraffe</li>
+    <li>1.x.x-222.3739.54 &nbsp;&nbsp;&nbsp;<span style="">|&nbsp;&nbsp;&nbsp;Flamingo</li>
+    <li>1.x.x-221.6008.13 &nbsp;&nbsp;&nbsp;<span style="">|&nbsp;&nbsp;&nbsp;Electric Eel</li>
+    <li>1.x.x-213.7172.25 &nbsp;&nbsp;&nbsp;<span style="">|&nbsp;&nbsp;&nbsp;Dolphin&nbsp;</span></li>
+</div>
+</div>
+<br/>
+<!--<img src="https://appspirimentlegal.web.app/intellij/plugin/vectorpreview/screenshot/vectorpreview.png"/>-->
+  ]]></description>
+    <change-notes><![CDATA[
+<h2>1.0.1</h2>
+<div style="margin-left: 20px;">
+    <span style="  font-weight: bold;">Added</span>
+<ul>
+    <li>Support for PNG & JPEG drawables</li>
+    <li>Handling "No drawables" scenario</li>
+</ul>
+</div>
+<h2>1.0.0</h2>
+<div style="margin-left: 20px;">
+<ul>
+    <li>List all vector drawbles</li>
+    <li>Zoom In/Zoom Out</li>
+    <li>Search Files</li>
+    <li>Filter by Module, Brand and Theme</li>
+</ul>
+</div>
+
+]]></change-notes>
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Resource Preview" secondary="false" icon="/toolWindowIcon.svg" anchor="left"
+                    factoryClass="io.github.appspirimentlabs.vectorpreview.window.DrawableToolWindowFactory"/>
+    </extensions>
+</idea-plugin>
