@@ -15,7 +15,7 @@ val DOLPHIN = "213.7172.25"
 val ic_version = GIRAFFE
 
 group = "io.github.appspirimentlabs"
-version = "1.0.1-$ic_version"
+version = "1.0.2-$ic_version"
 
 repositories {
     mavenCentral()
@@ -33,11 +33,7 @@ dependencies {
 
 intellij {
     version.set(ic_version)
-
-    // Use IntelliJ IDEA CE because it's the basis of the IntelliJ Platform:
     type.set("IC")
-
-    // Require the Android plugin (Gradle will choose the correct version):
     plugins.set(listOf("android"))
 }
 

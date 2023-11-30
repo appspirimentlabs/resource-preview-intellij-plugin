@@ -15,7 +15,7 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
 
-<span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;"><p>Android Studio Plugin to preview the Vector/SVG files in the project. This plugin shows all the vector images available in the project in a single scrollable list, and makes it easy to find one particular image resource from the list.</p>
+<span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;"><p>Android Studio Plugin to preview the Drawable resource files in the project. This plugin shows all the vector  available in the project in a single scrollable list, and makes it easy to find one particular image resource from the list.</p>
 
 <p>The plugin brings more features to make the search easier:</p>
 
@@ -32,10 +32,9 @@
 <h4>What's New</h4>
 
 <div style="margin-left: 20px;">
-    Version <b>1.0.1</b><br/>
+    Version <b>1.0.2</b><br/>
     <ul>
-        <li>Support for PNG & JPEG drawables</li>
-        <li>Handling "No drawables" scenario</li>
+        <li>Fixed @color missing issue</li>
     </ul>
 </div>
 <h4>Version Compatibility</h4>
@@ -52,6 +51,13 @@
 <!--<img src="https://appspirimentlegal.web.app/intellij/plugin/vectorpreview/screenshot/vectorpreview.png"/>-->
   ]]></description>
     <change-notes><![CDATA[
+<h2>1.0.2</h2>
+<div style="margin-left: 20px;">
+    <span style="  font-weight: bold;">Added</span>
+<ul>
+      <li>Fixed @color missing issue</li>
+</ul>
+</div>
 <h2>1.0.1</h2>
 <div style="margin-left: 20px;">
     <span style="  font-weight: bold;">Added</span>
