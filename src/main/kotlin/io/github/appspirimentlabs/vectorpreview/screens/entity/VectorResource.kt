@@ -25,7 +25,7 @@ data class VectorResource(
     override val brand: String,
     override val theme: String,
     override val tint: String?,
-    val vector: ImageVector
+    val vector: ImageVector?
 ): ImageResource
 
 

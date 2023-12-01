@@ -406,13 +406,16 @@ fun ImagePreview(resource: ImageResource, iconSize: MutableState<Dp>, bgcolor: C
 
             when (this) {
                 is VectorResource -> {
-                    Image(
-                        imageVector = this.vector,
-                        contentScale = ContentScale.Fit,
-                        contentDescription = null,
-                        colorFilter = tint?.toColor()?.let { ColorFilter.tint(it) },
-                        modifier = Modifier.padding(horizontal = 8.dp).padding(top = 0.dp).size(iconSize.value)
-                    )
+                    val vectorcontent = processVectorFile(this, LocalDensity.current)
+                    vectorcontent?.let {
+                        Image(
+                            imageVector = it,
+                            contentScale = ContentScale.Fit,
+                            contentDescription = null,
+                            colorFilter = tint?.toColor()?.let { ColorFilter.tint(it) },
+                            modifier = Modifier.padding(horizontal = 8.dp).padding(top = 0.dp).size(iconSize.value)
+                        )
+                    }
                 }
 
                 is PngResource -> {
